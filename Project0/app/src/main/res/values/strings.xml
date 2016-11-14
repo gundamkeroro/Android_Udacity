@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Project0</string>
+    <string name="Myproject">My Nanodegree Apps!</string>
+    <string name="movie">Popular Movie</string>
+    <string name="stock">Stock hawk</string>
+    <string name="reader">XYZ reader</string>
+    <string name="news">zui news</string>
+    <string name="capstone">capstone</string>
+</resources>

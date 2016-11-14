@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn_movie" type="id">movieid</item>
+    <item name="btn_stock" type="id">stock</item>
+    <item name="btn_reader" type="id">reader</item>
+    <item name="btn_news" type="id">news</item>
+    <item name="btn_capstone" type="id">capstone</item>
+</resources>
