@@ -25,6 +25,7 @@
             tools:text="YYYY"/>
 
         <TextView
+            android:id="@+id/Ratting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/image"
@@ -37,6 +38,7 @@
 
     </RelativeLayout>
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top"
@@ -45,6 +47,7 @@
         tools:text="Title"/>
 
     <TextView
+        android:id="@+id/describe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
