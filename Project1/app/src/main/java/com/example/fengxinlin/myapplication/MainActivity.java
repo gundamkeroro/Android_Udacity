@@ -1,5 +1,6 @@
 package com.example.fengxinlin.myapplication;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -7,11 +8,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends ActionBarActivity {
+    private FragmentManager fragmentManager = getFragmentManager();
+    PosterFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (savedInstanceState == null) {
+            fragment = new PosterFragment();
+            fragmentManager.beginTransaction()
+                    .add(R.id.container, fragment)
+                    .commit();
+        } else {
+            fragment = (PosterFragment) fragmentManager.getFragment(
+                    savedInstanceState, "fragmentContent");
+        }
     }
 
     @Override
@@ -27,10 +39,15 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.setting) {
             Intent intent = new Intent(this, SettingActivity.class);
             startActivity(intent);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        fragmentManager.putFragment(savedInstanceState, "fragmentContent", fragment);
+    }
 
 }

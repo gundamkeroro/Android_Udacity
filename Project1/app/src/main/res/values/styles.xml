@@ -10,4 +10,11 @@
 
     <style name="SettingTheme" parent="AppTheme"></style>
 
+    <style name="DetailTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/ActionBar.DetailTheme</item>
+    </style>
+
+    <style name="ActionBar.DetailTheme" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    </style>
+
 </resources>
