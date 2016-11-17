@@ -23,6 +23,8 @@
             android:name=".DetailActivity"
             android:label="@string/app_detail"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize">
             android:theme="@style/DetailTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
