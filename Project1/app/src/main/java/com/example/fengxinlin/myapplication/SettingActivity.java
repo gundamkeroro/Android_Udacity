@@ -3,13 +3,14 @@ package com.example.fengxinlin.myapplication;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.support.v4.app.NavUtils;
+import android.view.MenuItem;
 
 /**
  * Created by fengxinlin on 11/15/16.
  */
-public class SettingActivity extends PreferenceActivity implements Preference.OnPreferenceChangeListener{
+public class SettingActivity extends AppCompatPreferenceActivity implements Preference.OnPreferenceChangeListener{
 
 
     @Override
@@ -44,4 +45,15 @@ public class SettingActivity extends PreferenceActivity implements Preference.On
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            if (!super.onOptionsItemSelected(item)) {
+                NavUtils.navigateUpFromSameTask(this);
+            }
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

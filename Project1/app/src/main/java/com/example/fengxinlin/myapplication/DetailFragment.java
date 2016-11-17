@@ -10,10 +10,18 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by fengxinlin on 11/15/16.
  */
 public class DetailFragment extends Fragment {
+    @BindView(R.id.movie_title) TextView title;
+    @BindView(R.id.year) TextView year;
+    @BindView(R.id.describe) TextView description;
+    @BindView(R.id.Ratting) TextView rating;
+    @BindView(R.id.image) ImageView img;
 
     Movie movie;
 
@@ -35,12 +43,7 @@ public class DetailFragment extends Fragment {
     }
 
     private void DisplayMovie(View view) {
-        TextView title = (TextView) view.findViewById(R.id.movie_title);
-        TextView year = (TextView) view.findViewById(R.id.year);
-        TextView description = (TextView) view.findViewById(R.id.describe);
-        TextView rating = (TextView) view.findViewById(R.id.Ratting);
-        ImageView img = (ImageView) view.findViewById(R.id.image);
-
+        ButterKnife.bind(this, view);
 
         title.setText(movie.getTitle());
         description.setText(movie.getOverview());

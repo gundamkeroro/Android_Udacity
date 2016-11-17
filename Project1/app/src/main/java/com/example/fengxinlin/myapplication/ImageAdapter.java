@@ -31,13 +31,21 @@ public class ImageAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
-        String url;
+        ViewHolder viewHolder;
         if (view == null) {
             view = mLayoutInflater.inflate(layoutId, parent, false);
+            viewHolder = new ViewHolder();
+            viewHolder.imageView = (ImageView) view.findViewById(imageViewId);
+            view.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) view.getTag();
         }
-        ImageView imageView = (ImageView) view.findViewById(imageViewId);
-        url = getItem(position);
-        Picasso.with(context).load(url).into(imageView);
+        String url = getItem(position);
+        Picasso.with(context).load(url).into(viewHolder.imageView);
         return view;
+    }
+
+    static class ViewHolder {
+        ImageView imageView;
     }
 }

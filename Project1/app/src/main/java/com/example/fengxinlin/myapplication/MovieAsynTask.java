@@ -45,13 +45,11 @@ public class MovieAsynTask extends AsyncTask<String, Void, List<Movie>>{
         String JsonMovieString = null;
 
         try {
-            final String BASE_URL = "http://api.themoviedb.org/3/discover/movie?";
-            final String SORT_BY = "sort_by";
+            final String BASE_URL = "http://api.themoviedb.org/3/movie/";
             final String KEY = "api_key";
-            String sortBy = params[0];
+            final String SORT_BY = params[0];
 
-            Uri uri = Uri.parse(BASE_URL).buildUpon()
-                    .appendQueryParameter(SORT_BY, sortBy)
+            Uri uri = Uri.parse(BASE_URL + SORT_BY).buildUpon()
                     .appendQueryParameter(KEY, API)
                     .build();
 
