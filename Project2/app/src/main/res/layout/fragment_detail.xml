@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fengxinlin.myapplication.DetailFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/img_w"
+            android:layout_height="@dimen/img_h"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/year_top"
+            android:textSize="@dimen/large_size"
+            android:layout_toRightOf="@+id/image"
+            tools:text="YYYY"/>
+
+        <TextView
+            android:id="@+id/Ratting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image"
+            android:layout_below="@+id/year"
+            android:textSize="@dimen/mid_size"
+            android:layout_marginTop="@dimen/rate_top"
+            tools:text="0.0/10.0"/>
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="@dimen/large_size"
+        tools:text="Title"/>
+
+    <TextView
+        android:id="@+id/describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/small_gap"
+        tools:text="description description description"/>
+
+</LinearLayout>

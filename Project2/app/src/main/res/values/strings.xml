@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Popular Movie</string>
+    <string name="app_detail">Movie Detail</string>
+    <string name="actionsetting">Settings</string>
+    <string name="display_preferences_sort_order_key">SortType</string>
+    <string name="display_preference">Display Preference</string>
+    <string name="display_preferences_sort_order_title">Sort Order</string>
+    <string name="Summary">Select sort order of movie</string>
+    <string name="display_preference_sort_default">popular</string>
+
+
+    <string name="sort_array_item_1">Most Popular</string>
+    <string name="sort_array_item_2">Highest Rated</string>
+    <string name="sort_array_item_1_value">popular</string>
+    <string name="sort_array_item_2_value">top_rated</string>
+</resources>
